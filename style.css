@@ -192,7 +192,6 @@ article {
 footer {
     text-align: center;
     font-size: 2rem;
-    padding-bottom: 70px;
 }
 
 #footer-links {
@@ -243,6 +242,10 @@ footer {
     /* footer */
     #footer-links {
         display: block;
+    }
+
+    footer {
+        padding-bottom: 70px;
     }
 }
 
