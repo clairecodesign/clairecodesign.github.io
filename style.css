@@ -191,6 +191,7 @@ article {
 /* footer */
 footer {
     text-align: center;
+    font-size: 2rem;
 }
 
 #footer-links {
