@@ -1,8 +1,7 @@
-
 /* basics! */
 html {
     box-sizing: border-box;
-    font-size: 100%;
+    font-size: 1rem;
 }
 
 *, *:before, *:after {
@@ -10,14 +9,12 @@ html {
 }
 
 body {
+    width: 100%;
     padding: 20px;
-    color: #1d1e1e ;
-    line-height: 1.3;
+    color: #1d1e1e;
     font-family: henderson-sans-basic, sans-serif;
     font-weight: 300;
     font-style: normal;
-    color: #1d1e1e ;
-    width: 100%;
 }
 
 *, body {
@@ -41,8 +38,18 @@ b {
     font-weight: 600;
 }
 
-i, .project-information {
-    font-family: cambria, serif;
+p {
+    line-height: 1.7;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 5px 10px;
+}
+
+.stand-out {
+    display: block;
+    margin: 5px 0;
+    font-size: 1.4rem;
 }
 
 /* multiple */
@@ -63,24 +70,25 @@ aside, footer {
 /* header */
 #header-links {
     float: right;
-    margin-top: 14px;
+    margin-top: 20px;
 }
 
 #header-links li {
     margin-left: 10px;
+    font-size: 1.3rem;
 }
 
 #navigation {
     text-transform: uppercase;
-    margin-top: 5px;
+    margin-top: 12px;
 }
 
 #navigation li {
-    margin-right: 10px;
-    font-size: 1rem;
+    margin-right: 13px;
 }
 #page-title {
     font-weight: 300;
+    margin: 10px 0;
 }
 
 /* main */
@@ -88,6 +96,7 @@ main {
     margin: 5px auto;
 }
 
+/* container */
 #content {
     display: block; 
     display: -webkit-flex;
@@ -97,96 +106,92 @@ main {
     width: 100%;
 }
 
-article {
+/* project */
+section {
     width: 50%;
-    margin-bottom: -4px;
+    margin-bottom: -5px;
+}
+
+/* project page */
+.project {
+    font-family: Cambria, serif;
 }
 
 .project-thumbnail {
     width: 100%;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
 .project-date {
-    margin-top: 10px;
     font-weight: normal;
-    font-size: 1.1rem;
     color: #888;
+    font-size: 1.2rem;
 }
 
 .project-title {
-    font-weight: 600;
-    line-height: 130%;
-    margin: 10px 0;
+    font-family: henderson-sans-basic, sans-serif;
 }
 
-.project-information {
-    font-size: 1.25rem;
-    line-height: 140%;
+.project p {
+    font-size: 1.17rem;
+    line-height: 1.5;
 }
 
-.project h2, .project h3, .project p {
+/* columns */
+.row {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.column {
+    float: left;
+    width: 50%;
     padding: 0 10px;
 }
 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column img {
+    width: 100%;
+}
+
 /* about */
-#about-page, #contact {
-    text-align: center;
-    padding: 0 50px;
-    width: 800px;
+#about-page {
+    width: 70%;
     margin: 0 auto;
 }
 
 #headshot {
     width: 200px;
-    height: 200px;
     border-radius: 100%;
 }
-
-.stand-out {
-    display: block;
-    font-size: 130%;
-    margin: 10px 0;
-}
-
-#about-page p {
-    margin: 10px;
-}
-
 #skills {
-    width: 90%;
-    margin: 20px auto;
-    line-height: 2.5rem;
-    font-size: 0.9rem;
+    margin-top: 10px;
 }
 
 #skills li {
     display: inline;
-    background-color: #1d1e1e;;
-    padding: 5px 12px 8px;
     margin: 0 4px;
-    border-radius: 50px;
-    color: white;
 } 
 
-#call {
-    background: #4e48c3;
-    width: 142px;
-    margin: 0 auto;
-    padding: 11px 13px;
-    border-radius: 30px;
+#about-page h2 {
     text-align: center;
-    color: white;
-    margin-bottom: 10px;
-    font-size: 1rem;
+    margin: 20px 10px;
 }
 
-#contact img {
-    width: 100%;
-    margin: 20px 0;
+#about-page .column {
+    width: 70%;
 }
 
+#about-page .column:first-child {
+    text-align: right;
+    width: 30%;
+}
 
 /* footer */
 footer {
@@ -222,43 +227,47 @@ footer {
     }
 
     /* about */
-    #about-page, #contact {
+    #about-page {
         padding: 0;
         width: 100%;
     }
-    #skills {
-        width: 95%;
-    }
 
     /* main */
-    #content {
+    #content, #footer-links {
         display: block; 
     }
 
-    article {
+    /* project */
+    section {
         width: 100%;
     }
 
-    /* footer */
-    #footer-links {
-        display: block;
+    /* column */
+    .row {
+        margin: 0;
     }
 
-    footer {
+    .column, #about-page .column, 
+    #about-page .column:first-child {
+        width: 100%;
+        padding: 0;
+        text-align: inherit;
+    }
+
+    .column img {
+        padding: 10px 10px 0;
+    }
+
+    /* footer */
+    footer { 
         padding-bottom: 70px;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     #headshot {
         width: 100%;
         height: 100%;
         border-radius: 0;
-    }
-    #about-page {
-        text-align: left;
-    }
-    #skills {
-        text-align: center;
     }
 }
